@@ -1,2 +1,2 @@
-export * from "./infrastructure"
-export * from "./dependencies"
+export * from './infrastructure'
+export * from './dependencies'

@@ -1,7 +1,7 @@
-import { GetUsersUseCase } from "~/core";
-import { UserService, UsersPloc } from "~/core/users/infrastructure";
+import { GetUsersUseCase } from '~/core'
+import { UserService, UsersPloc } from '~/core/users/infrastructure'
 
-function provideUsersPloc(): UsersPloc {
+function provideUsersPloc (): UsersPloc {
   const usersService = new UserService()
   const getUsersUseCase = new GetUsersUseCase(usersService)
   const userPloc = new UsersPloc(getUsersUseCase)

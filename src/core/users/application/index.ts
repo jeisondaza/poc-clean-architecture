@@ -1,1 +1,1 @@
-export * from "./GetUsersUseCase"
+export * from './GetUsersUseCase'

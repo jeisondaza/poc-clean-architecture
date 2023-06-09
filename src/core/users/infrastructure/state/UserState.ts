@@ -1,4 +1,4 @@
-import { Users } from "@users/domain";
+import { Users } from '@users/domain'
 
 export interface CommonUsersState {
   sortOption: string
@@ -9,19 +9,18 @@ export interface LoadingUsersState {
 }
 
 export interface LoadedUsersState {
-  kind: 'LoadedUserState',
+  kind: 'LoadedUserState'
   users: Users
 }
 
 export interface ErrorUsersState {
-  kind: "ErrorUsersState";
-  error: string;
+  kind: 'ErrorUsersState'
+  error: string
 }
 
 export type UsersState = (LoadingUsersState | LoadedUsersState | ErrorUsersState) & CommonUsersState
 
 export const usersInitialState: UsersState = {
   kind: 'LoadingUserState',
-  sortOption: ""
+  sortOption: ''
 }
-

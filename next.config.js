@@ -4,10 +4,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'robohash.org',
-      },
-    ],
-  },
+        hostname: 'robohash.org'
+      }
+    ]
+  }
 }
 
 module.exports = nextConfig

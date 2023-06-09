@@ -1,9 +1,7 @@
-import { Users, iUserService } from "@users/domain/"
+import { Users, iUserService } from '@users/domain/'
 
 export class UserService implements iUserService {
-  
-  get(): Promise<Users> {
-    return fetch("https://dummyjson.com/users").then((response) => response.json())
+  async get (): Promise<Users> {
+    return await fetch('https://dummyjson.com/users').then(async (response) => await response.json())
   }
-  
 }

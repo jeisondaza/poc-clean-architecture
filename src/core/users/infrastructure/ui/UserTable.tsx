@@ -1,11 +1,10 @@
 import Image from 'next/image'
-import { dependenciesLocator } from "~/common/dependencies";
+import { dependenciesLocator } from '~/common/dependencies'
 
-export async function UserTable(){
+export async function UserTable () {
   const userPloc = dependenciesLocator.provideUsersPloc()
   await userPloc.getUsers()
   const state = await userPloc.state
-  
 
   if (state.kind === 'LoadedUserState') {
     return (
@@ -19,7 +18,7 @@ export async function UserTable(){
             <th>Phone</th>
             <th>Current Location</th>
           </tr>
-          {state.users.users.map((user, index) =>(
+          {state.users.users.map((user, index) => (
             <tr key={user.id}>
               <td>{index + 1}</td>
               <td>
@@ -44,4 +43,4 @@ export async function UserTable(){
       <h1>{state.kind}</h1>
     </main>
   )
-} 
+}

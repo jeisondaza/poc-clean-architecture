@@ -1,5 +1,5 @@
-import { Users } from "./User";
+import { Users } from './User'
 
 export interface iUserService {
-  get(): Promise<Users>
+  get: () => Promise<Users>
 }

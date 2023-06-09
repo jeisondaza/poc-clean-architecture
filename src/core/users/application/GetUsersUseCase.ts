@@ -1,13 +1,13 @@
-import { Users ,iUserService } from "@users/domain";
+import { Users, iUserService } from '@users/domain'
 
 export class GetUsersUseCase {
-  private userService: iUserService;
+  private readonly userService: iUserService
 
-  constructor(userService: iUserService){
+  constructor (userService: iUserService) {
     this.userService = userService
   }
 
-  execute(): Promise<Users>{
-    return this.userService.get()
+  async execute (): Promise<Users> {
+    return await this.userService.get()
   }
 }
