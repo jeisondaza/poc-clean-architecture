@@ -1,9 +1,12 @@
 {
   "extends": "next/core-web-vitals",
+  "plugins": [
+    "hexagonal-architecture"
+  ],
    "overrides": [
     {
       "files": [
-        "contexts/{backend,frontend}/*/src/**/*.ts"
+        "src/**/*.ts"
       ],
       "rules": {
         "hexagonal-architecture/enforce": [
